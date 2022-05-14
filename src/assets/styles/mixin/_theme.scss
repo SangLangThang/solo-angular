@@ -1,0 +1,12 @@
+//theme
+@mixin dark {
+  :host-context(.page.dark) {
+    @content;
+  }
+}
+
+@mixin global-dark {
+  .page.dark {
+    @content;
+  }
+}

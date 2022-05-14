@@ -1,0 +1,74 @@
+<div class="faq">
+  <div class="faq__center center">
+    <div class="faq__container">
+      <div class="faq__bg"></div>
+      <h2 class="faq__title h2" data-aos="animation-scale-top" data-aos-duration="600">Frequently asked questions</h2>
+      <div class="faq__row">
+        <div class="faq__col">
+          <div class="faq__group">
+            <div class="faq__category">{{FAQ_DATA_BASIC.category}}</div>
+            <accordion [collapsing]="collapsing" accordionStyle="faq__list" accordionItemStyle="faq__item">
+              <accordion-item *ngFor="let data of FAQ_DATA_BASIC.list">
+                <ng-template accordionHeader let-toggle="toggle">
+                  <div class="faq__head" (click)="toggle()">{{data.head}}</div>
+                </ng-template>
+                <ng-template accordionContent>
+                  <div class="faq__body">{{data.body}}</div>
+                </ng-template>
+              </accordion-item>
+            </accordion>
+          </div>
+          <div class="faq__group">
+            <div class="faq__category">{{FAQ_DATA_PLAN.category}}</div>
+            <accordion [collapsing]="collapsing" accordionStyle="faq__list" accordionItemStyle="faq__item">
+              <accordion-item *ngFor="let data of FAQ_DATA_PLAN.list">
+                <ng-template accordionHeader let-toggle="toggle">
+                  <div class="faq__head" (click)="toggle()">{{data.head}}</div>
+                </ng-template>
+                <ng-template accordionContent>
+                  <div class="faq__body">{{data.body}}</div>
+                </ng-template>
+              </accordion-item>
+            </accordion>
+          </div>
+        </div>
+        <div class="faq__col">
+          <div class="faq__group">
+            <div class="faq__category">{{FAQ_DATA_USING.category}}</div>
+            <accordion [collapsing]="collapsing" accordionStyle="faq__list" accordionItemStyle="faq__item">
+              <accordion-item *ngFor="let data of FAQ_DATA_USING.list">
+                <ng-template accordionHeader let-toggle="toggle">
+                  <div class="faq__head" (click)="toggle()">{{data.head}}</div>
+                </ng-template>
+                <ng-template accordionContent>
+                  <div class="faq__body">{{data.body}}</div>
+                </ng-template>
+              </accordion-item>
+            </accordion>
+          </div>
+          <div class="faq__group">
+            <div class="faq__category">{{FAQ_DATA_PRIVACY.category}}</div>
+            <accordion [collapsing]="collapsing" accordionStyle="faq__list" accordionItemStyle="faq__item">
+              <accordion-item *ngFor="let data of FAQ_DATA_PRIVACY.list">
+                <ng-template accordionHeader let-toggle="toggle">
+                  <div class="faq__head" (click)="toggle()">{{data.head}}</div>
+                </ng-template>
+                <ng-template accordionContent>
+                  <div class="faq__body">{{data.body}}</div>
+                </ng-template>
+              </accordion-item>
+            </accordion>
+          </div>
+        </div>
+      </div>
+      <div class="faq__gallery">
+        <div class="faq__preview"><img srcset="assets/img/figures-3.1@2x.png 2x" src="assets/img/figures-3.1.png"
+            alt=""></div>
+        <div class="faq__preview" data-aos="animation-translate-up" data-aos-duration="1000"><img
+            srcset="assets/img/figures-3.2@2x.png 2x" src="assets/img/figures-3.2.png" alt=""></div>
+        <div class="faq__preview" data-aos="animation-translate-up" data-aos-duration="1000"><img
+            srcset="assets/img/figures-3.3@2x.png 2x" src="assets/img/figures-3.3.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div>

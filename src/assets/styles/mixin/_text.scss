@@ -1,0 +1,160 @@
+@import "../color-theme";
+.d1,
+.d2,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @include fp;
+  font-weight: 600;
+}
+.d1 {
+  font-size: 72px;
+  line-height: calc(80 / 72);
+  @include d {
+    font-size: 48px;
+    line-height: calc(56 / 48);
+  }
+  @include m {
+    font-size: 40px;
+    line-height: calc(48 / 40);
+  }
+}
+.d2 {
+  font-size: 64px;
+  line-height: calc(72 / 64);
+}
+.h1 {
+  font-size: 56px;
+  line-height: calc(64 / 56);
+}
+.h2 {
+  font-size: 48px;
+  line-height: calc(56 / 48);
+  @include d {
+    font-size: 40px;
+    line-height: calc(48 / 40);
+  }
+  @include m {
+    font-size: 32px;
+    line-height: calc(40 / 32);
+  }
+}
+.h3 {
+  font-size: 40px;
+  line-height: calc(48 / 40);
+}
+.h4 {
+  font-size: 32px;
+  line-height: calc(40 / 32);
+}
+.h5 {
+  font-size: 24px;
+  line-height: calc(32 / 24);
+}
+.h6 {
+  font-size: 20px;
+  line-height: calc(24 / 20);
+}
+.stage {
+  margin-bottom: 24px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  line-height: calc(16 / 12);
+  text-transform: uppercase;
+  color: $secondary;
+  @include m {
+    margin-bottom: 16px;
+  }
+}
+
+@mixin d1 {
+  @include fp;
+  font-size: 72px;
+  line-height: calc(80 / 72);
+  font-weight: 600;
+}
+@mixin d2 {
+  @include fp;
+  font-size: 64px;
+  line-height: calc(72 / 64);
+  font-weight: 600;
+}
+@mixin h1 {
+  @include fp;
+  font-size: 56px;
+  line-height: calc(64 / 56);
+  font-weight: 600;
+}
+@mixin h2 {
+  @include fp;
+  font-size: 48px;
+  line-height: calc(56 / 48);
+  font-weight: 600;
+}
+@mixin h3 {
+  @include fp;
+  font-size: 40px;
+  line-height: calc(48 / 40);
+  font-weight: 600;
+}
+@mixin h4 {
+  @include fp;
+  font-size: 32px;
+  line-height: calc(40 / 32);
+  font-weight: 600;
+}
+@mixin h5 {
+  @include fp;
+  font-size: 24px;
+  line-height: calc(32 / 24);
+  font-weight: 600;
+}
+@mixin h6 {
+  @include fp;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  font-weight: 600;
+}
+@mixin sub-headline {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: calc(24 / 20);
+}
+@mixin title {
+  @include fp;
+  font-size: 18px;
+  line-height: calc(24 / 18);
+  font-weight: 600;
+}
+@mixin body-small {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+}
+@mixin button-sm {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  font-weight: 700;
+}
+@mixin caption-13 {
+  font-size: 13px;
+  line-height: calc(24 / 13);
+  font-weight: 600;
+}
+@mixin chip {
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+@mixin chip-sm {
+  font-size: 11px;
+  line-height: calc(16 / 11);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}

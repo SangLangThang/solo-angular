@@ -1,0 +1,27 @@
+<div class="comment">
+  <div class="comment__center center">
+    <h2 class="comment__title h2" data-aos="animation-scale-top" data-aos-duration="600">What people are saying</h2>
+    <div class="comment__container">
+      <swiper [config]="config" class="comment__slider">
+        <ng-template swiperSlide *ngFor="let item of COMMENT_DATA">
+          <div class="comment__item">
+            <div class="comment__body">
+              <div class="comment__text">{{item.text}}</div>
+              <div class="comment__rating" >
+                <div class="comment__icon" *ngFor="let num repeat item.rating"><img src="assets/img/star-fill.svg" alt=""></div>
+              </div>
+            </div>
+            <div class="comment__author">
+              <div class="comment__ava"><img [src]="item.avatar" alt=""></div>
+              <div class="comment__details">
+                <div class="comment__man">{{item.author}}</div>
+                <div class="comment__time">{{item.time}}</div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</div>
+

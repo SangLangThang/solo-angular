@@ -1,0 +1,11 @@
+// selectors
+@mixin nl {
+  &:not(:last-child) {
+    @content;
+  }
+}
+@mixin nf {
+  &:not(:first-child) {
+    @content;
+  }
+}

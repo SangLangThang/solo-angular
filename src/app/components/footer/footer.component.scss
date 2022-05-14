@@ -1,0 +1,254 @@
+@import "/src/assets/styles/mixins";
+@import "/src/assets/styles/color-theme";
+.footer {
+  position: relative;
+  &__body {
+    margin-bottom: 55px;
+    @include d {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    @include m {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__wrap {
+    max-width: 345px;
+    margin-bottom: 24px;
+    @include d {
+      margin: 0;
+    }
+    @include m {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  &__pic {
+    width: 138px;
+    &_light {
+      display: none;
+    }
+  }
+  &__text {
+    color: $gray;
+    @include m {
+      max-width: 230px;
+      margin: 0 auto;
+    }
+  }
+  &__line {
+    display: flex;
+    align-items: center;
+    @include d {
+      margin: -5px 0 0 auto;
+    }
+    @include m {
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 414px;
+    }
+  }
+  &__downloads {
+    display: flex;
+  }
+  &__download {
+    img {
+      @include d {
+        height: 56px;
+      }
+    }
+    @include nl {
+      margin-right: 12px;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include d {
+      display: none;
+    }
+  }
+  &__nav &__link {
+    font-weight: 600;
+    color: $gray;
+    transition: color .2s;
+    &:hover {
+      color: $black;
+    }
+    &.active {
+      color: $primary;
+    }
+    @include nl {
+      margin-right: 48px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+    border-top: 2px solid rgba($secondary, .15);
+    @include m {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__copyright {
+    margin-right: auto;
+    @include caption-13;
+    color: $gray;
+    @include m {
+      margin: 0 0 24px;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    @include m {
+      justify-content: center;
+    }
+  }
+  &__social &__link {
+    font-size: 0;
+    .icon {
+      font-size: 16px;
+      fill: $gray;
+      transition: fill .2s;
+    }
+    &:hover .icon {
+      fill: $black;
+    }
+    @include nl {
+      margin-right: 24px;
+    }
+  }
+}
+@include dark {
+  .footer {
+    &__pic {
+      &_dark {
+        display: none;
+      }
+      &_light {
+        display: inline-block;
+      }
+    }
+    &__link {
+      &:hover {
+        color: $white;
+      }
+      &.active {
+        color: $primary;
+      }
+    }
+    &__copyright {
+      color: $gray-light;
+    }
+    &__social .footer__link {
+      .icon {
+        fill: $gray-light;
+      }
+      &:hover .icon {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.switch {
+  position: fixed;
+  left: calc(50% - 700px);
+  bottom: 30px;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-size: 0;
+  transition: opacity .25s;
+  @include w {
+    left: 32px;
+  }
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  &__in {
+    position: relative;
+    display: inline-block;
+    border: 8px solid $white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    transition: all .2s;
+  }
+  &__box {
+    position: relative;
+    display: block;
+    width: 72px;
+    height: 32px;
+    box-shadow: inset 0 0 0 1px rgba($gray-light, .4);
+    background: $white;
+    border-radius: 16px;
+    transition: all .2s;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: $primary;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all .2s;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    transition: opacity .2s;
+    .icon {
+      font-size: 24px;
+      fill: #808191;
+    }
+    &_light {
+      right: 5px;
+    }
+    &_dark {
+      left: 4px;
+      opacity: 0;
+    }
+  }
+  &__input:checked + &__in {
+    border-color: rgba(#000, .5);
+  }
+  &__input:checked + &__in &__box {
+    box-shadow: inset 0 0 0 1px rgba($white, .1);
+    background: rgba(#000, .3);
+  }
+  &__input:checked + &__in &__box:before {
+    width: 8px;
+    height: 24px;
+    transform: translate(48px,-50%);
+    border-radius: 4px;
+  }
+  &__input:checked + &__in &__icon_light {
+    opacity: 0;
+  }
+  &__input:checked + &__in &__icon_dark {
+    opacity: 1;
+  }
+  @include hover {
+    opacity: .8;
+  }
+}

@@ -1,0 +1,17 @@
+/* Swiper */
+@import "~swiper/swiper-bundle.css";
+/* AOS */
+@import "~aos/dist/aos.css";
+
+/* Custom theme color*/
+@import "./assets/styles/color-theme";
+/* Importing Bootstrap SCSS file. */
+
+/* Reset CSS */
+@import "./assets/styles/reset";
+
+/* Global Style */
+@import "./assets/styles/mixins";
+@import "./assets/styles/global/button";
+@import "./assets/styles/global/variables";
+@import "./assets/styles/global/global";

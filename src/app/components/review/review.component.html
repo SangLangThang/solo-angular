@@ -1,0 +1,19 @@
+<div class="review">
+  <div class="review__center center">
+    <h2 class="review__title h2" data-aos="animation-scale-top" data-aos-duration="600">What people are saying</h2>
+    <div class="review__container">
+      <swiper [config]="config">
+        <ng-template swiperSlide *ngFor="let review of reviews">
+          <div class="review__item">
+            <div class="review__text">{{review.text}}</div>
+            <div class="review__rating">
+              <div class="review__icon" *ngFor="let i repeat review.rating"><img src="assets/img/star-fill.svg" alt=""></div>
+            </div>
+            <div class="review__author">{{review.author}}</div>
+            <div class="review__company">{{review.company}}</div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</div>
