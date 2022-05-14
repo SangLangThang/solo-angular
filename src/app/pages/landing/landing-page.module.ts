@@ -12,12 +12,12 @@ import { ProductivityComponent } from 'src/app/components/productivity/productiv
 import { QualityComponent } from 'src/app/components/quality/quality.component';
 import { StepsComponent } from 'src/app/components/steps/steps.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { LandingComponent } from './landing.component';
+import { LandingPageComponent } from './landing-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingComponent,
+    component: LandingPageComponent,
   },
 ];
 @NgModule({
@@ -32,8 +32,8 @@ const routes: Routes = [
     DescriptionComponent,
     ProductivityComponent,
     InviteComponent,
-    LandingComponent,
+    LandingPageComponent,
   ],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
 })
-export class LandingModule {}
+export class LandingPageModule {}

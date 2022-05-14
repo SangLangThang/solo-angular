@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DownloadComponent } from 'src/app/components/download/download.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { DonwloadsComponent } from './donwloads.component';
+import { DonwloadsPageComponent } from './donwloads-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DonwloadsComponent,
+    component: DonwloadsPageComponent,
   },
 ];
 @NgModule({
-  declarations: [DonwloadsComponent, DownloadComponent],
+  declarations: [DonwloadsPageComponent, DownloadComponent],
   imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
 })
-export class DonwloadsModule {}
+export class DonwloadsPageModule {}
